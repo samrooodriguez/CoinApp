@@ -8,6 +8,9 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { appRoutes } from './routerCongif';
 import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { CoinService } from './coin.service';
+
 
 
 @NgModule({
@@ -19,9 +22,10 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CoinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
