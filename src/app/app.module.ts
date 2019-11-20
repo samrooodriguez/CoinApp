@@ -10,6 +10,7 @@ import { appRoutes } from './routerCongif';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { CoinService } from './coin.service';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -23,7 +24,8 @@ import { CoinService } from './coin.service';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [CoinService],
   bootstrap: [AppComponent]
